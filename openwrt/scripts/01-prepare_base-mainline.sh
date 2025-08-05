@@ -59,9 +59,9 @@ if [ "$local_kernel_version" = "$release_kernel_version" ] && [ -z "$git_passwor
     git clone https://$github/sbwml/target_linux_generic -b openwrt-24.10 target/linux/generic-6.12 --depth=1
 else
     if [ "$(whoami)" = "sbwml" ]; then
-        git clone https://$gitea/sbwml/target_linux_generic -b openwrt-24.10 target/linux/generic-6.12 --depth=1
+        git clone https://github.com/dd-ray/target_linux_generic -b openwrt-24.10 target/linux/generic-6.12 --depth=1
     else
-        git clone https://"$git_name":"$git_password"@$gitea/sbwml/target_linux_generic -b openwrt-24.10 target/linux/generic-6.12 --depth=1
+        git clone https://github.com/dd-ray/target_linux_generic -b openwrt-24.10 target/linux/generic-6.12 --depth=1
     fi
 fi
 cp -a target/linux/generic-6.12/* target/linux/generic
